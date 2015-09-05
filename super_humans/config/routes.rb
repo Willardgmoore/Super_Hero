@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'abilities/index'
+
+  get 'abilities/show'
+
+  get 'abilities/new'
+
+  get 'super_people/index'
+
+  get 'super_people/show'
+
+  get 'super_people/new'
+
+  get 'super_people/villians'
+
+  get 'super_people/heroes'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
