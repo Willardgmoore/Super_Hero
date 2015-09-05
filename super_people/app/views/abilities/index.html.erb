@@ -1,0 +1,12 @@
+<!-- <p>Find me in app/views/ability/index.html.erb</p> -->
+
+<h1> Abilities </h1>
+<p><%= link_to 'New Ability', new_ability_path %></p>
+
+
+<% @ability.each do |ability| %>
+  <h2><%= ability.title %></h2>
+  <h3><%= ability.author %></h3>
+  <p><%= ability.body %></p>
+  <%= link_to 'Show Ability', abilities_path(ability) %>
+<% end %>
