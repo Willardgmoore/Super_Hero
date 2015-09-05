@@ -1,2 +1,8 @@
 <h1>Abilities#show</h1>
-<p>Find me in app/views/abilities/show.html.erb</p>
+
+<% @ability.each do |ability| %>
+  <h2><%= ability.name %></h2>
+  <p><%= ability.super_id %></p>
+  <p><%= ability.description %></p>
+  <%= link_to 'Show Ability', abilities_path(ability) %>
+<% end %>

@@ -7,41 +7,7 @@
 
 <% @super_person.each do |super_person| %>
   <h2><%= super_person.name %></h2>
-  <h3><%= super_person.gender %></h3>
-  <p><%= super_person.nemesis_id %></p>
-  <p><%= super_person.has_cape %></p>
-  <p><%= super_person.location %></p>
-  <p><%= super_person.weakness %></p>
-  <p><%= super_person.is_hero %></p>
-  <p><%= super_person.description %></p>
   <%= link_to 'Show Super', super_people_path(super_person) %>
   <%= link_to 'Edit Super', super_people_path(super_person) %>
-<!--TODO: update link_to edit path -->
+<!--TODO: update link_to edit path and show -->
 <% end %>
-
-
-
-<!-- <table>
-<thead>
-
-<tr>  Name  </tr>
-<tr>  Gender  </tr>
-<tr>  nemesis_id  </tr>
-<tr>  has-cape  </tr>
-<tr>  location  </tr>
-<tr>  weakness  </tr>
-<tr>  is_hero  </tr>
-<tr>  description  </tr>
-
-</thead>
-
-
-
-<tbody>
-
-
-
-</tbody>
-
-
-</table> -->

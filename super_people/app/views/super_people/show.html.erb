@@ -1,2 +1,14 @@
-<h1>SuperPeople#show</h1>
-<p>Find me in app/views/super_people/show.html.erb</p>
+<h1>Super Profile</h1>
+
+<% @super_person.each do |super_person| %>
+  <h2>Name:  <%= super_person.name %></h2>
+  <p>Gender: <%= super_person.gender %></p>
+  <p>Nemesis: <%= super_person.nemesis_id %></p>
+  <p>Cape: <%= super_person.has_cape %></p>
+  <p>Location: <%= super_person.location %></p>
+  <p>Weakness: <%= super_person.weakness %></p>
+  <p>Is: <%= super_person.is_hero %></p>
+  <p>Desc: <%= super_person.description %></p>
+  <%= link_to 'Show Super', super_people_path(super_person) %>
+  <%= link_to 'Edit Super', super_people_path(super_person) %>
+<% end %>
