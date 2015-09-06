@@ -21,6 +21,29 @@ class AbilitiesController < ApplicationController
   	end
   end
 
+  def edit
+    @ability = Ability.find(params[:id])
+  end
+
+  def update
+    @ability = Ability.find(params[:id])
+
+    if @abilities.update(ability_params)
+      redirect_to abilities_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @ability = Ability.find(params[:id])
+    @ability.destroy
+    redirect_to abilities_path
+  end
+
+  def delete
+  end
+
   private
 
   def ability_params

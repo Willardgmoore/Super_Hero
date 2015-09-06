@@ -1,8 +1,8 @@
-<h1>Abilities#show</h1>
+<h1>Ability Show</h1>
 
-<% @ability.each do |ability| %>
-  <h2><%= ability.name %></h2>
-  <p><%= ability.super_id %></p>
-  <p><%= ability.description %></p>
-  <%= link_to 'Show Ability', abilities_path(ability) %>
-<% end %>
+
+  <h2><%= @ability.name %></h2>
+  <p><%= @ability.super_id %></p>
+  <p><%= @ability.description %></p>
+  <%= link_to 'Edit', abilities_path(@ability) %>
+  <%= link_to 'Destroy', @ability, method: :delete %>

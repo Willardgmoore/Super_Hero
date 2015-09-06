@@ -4,7 +4,7 @@ class SuperPeopleController < ApplicationController
   end
 
   def show
-    @super_person = SuperPerson(params[:id])
+    @super_person = SuperPerson.find(params[:id])
   end
 
   def new
@@ -21,6 +21,24 @@ class SuperPeopleController < ApplicationController
     end
   end
 
+
+  def edit
+    @super_person = SuperPerson.find(params[:id])
+  end
+
+  def update
+    @super_person = SuperPerson.find(params[:id])
+
+    if @super_person(super_person_params)
+      redirect_to super_people_path
+    else
+      render :edit
+    end
+  end
+
+  
+
+
   def villians
     @super_person = SuperPerson.where(is_hero: false)
   end
@@ -29,10 +47,11 @@ class SuperPeopleController < ApplicationController
     @super_person = SuperPerson.where(is_hero: true)
   end
 
+
   private
 
   def super_person_params
     params.require(:super_person).permit(:name, :gender, :nemesis_id, :has_cape, :location, :weakness, :is_hero, :description)
   end
 
-end
+# end
