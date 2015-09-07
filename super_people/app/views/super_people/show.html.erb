@@ -1,12 +1,12 @@
 <h1>Super Profile</h1>
 
   <h2>Name:  <%= @super_person.name %></h2>
-  <p>Gender: <%= @super_person.gender %></p>
+  <p>Gender: <%= @super_person.gender ? "Female" : "Male"%></p>
   <p>Nemesis: <%= @super_person.nemesis_id %></p>
-  <p>Cape: <%= @super_person.has_cape %></p>
+  <p>Has Cape: <%= @super_person.has_cape ? "Yes" : "No"%></p>
   <p>Location: <%= @super_person.location %></p>
   <p>Weakness: <%= @super_person.weakness %></p>
-  <p>Is: <%= @super_person.is_hero %></p>
+  <p>Is: <%= @super_person.is_hero ? "Hero" : "Villian" %></p>
   <p>Desc: <%= @super_person.description %></p>
-  <%= link_to 'Edit Super', super_people_path(@super_person) %>
+  <%= link_to 'Edit Super', edit_super_person_path %>
   <%= link_to 'Destroy Super', @super_person, method: :delete %>

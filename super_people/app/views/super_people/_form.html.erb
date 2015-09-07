@@ -1,0 +1,39 @@
+<%= form_for @super_person do |x| %>
+  <%= x.label :name %>: 
+  <%= x.text_field :name %>
+
+  <%= x.label :gender %>: 
+  <%= x.text_field :gender %> 
+<!--     <select name="mydropdown">
+<option value="true">Female</option>
+<option value="false">Male</option>
+</select>
+ -->
+  <%= x.label :nemesis_id %>:
+  <%= x.text_field :nemesis_id %>
+
+  <%= x.label :has_cape %>:
+  <%= x.text_field :has_cape %>
+<!--   <select name="mydropdown">
+<option value="true">Yes</option>
+<option value="false">No</option>
+</select>
+ -->
+  <%= x.label :location %>:
+  <%= x.text_field :location %>
+
+  <%= x.label :weakness %>:
+  <%= x.text_field :weakness %>
+
+  <%= x.label :is_hero %>:
+  <%= x.text_field :is_hero %>
+<!--     <select name="mydropdown">
+<option value="true">Hero</option>
+<option value="false">Villian</option>
+</select>
+ -->
+  <%= x.label :description %>:
+  <%= x.text_field :description %>
+
+  <%= x.submit %>
+<% end %>

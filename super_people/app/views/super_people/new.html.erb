@@ -1,28 +1,2 @@
 <h1> New Super </h1>
-<%= form_for @super_person do |x| %>
-  <%= x.label :name %>: 
-  <%= x.text_field :name %>
-
-  <%= x.label :gender %>: 
-  <%= x.text_field :gender %> 
-
-  <%= x.label :nemesis_id %>:
-  <%= x.text_field :nemesis_id %>
-
-  <%= x.label :has_cape %>:
-  <%= x.text_field :has_cape %>
-
-  <%= x.label :location %>:
-  <%= x.text_field :location %>
-
-  <%= x.label :weakness %>:
-  <%= x.text_field :weakness %>
-
-  <%= x.label :is_hero %>:
-  <%= x.text_field :is_hero %>
-
-  <%= x.label :description %>:
-  <%= x.text_field :description %>
-
-  <%= x.submit %>
-<% end %>
+<%= render 'form' %>

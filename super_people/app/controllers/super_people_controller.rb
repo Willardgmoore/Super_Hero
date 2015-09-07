@@ -29,15 +29,21 @@ class SuperPeopleController < ApplicationController
   def update
     @super_person = SuperPerson.find(params[:id])
 
-    if @super_person(super_person_params)
+    if @super_person.find_by(super_person_params)
       redirect_to super_people_path
     else
       render :edit
     end
   end
 
-  
+  def destroy
+    @super_person = SuperPerson.find(params[:id])
+    @super_person.destroy
+    redirect_to super_people_path
+  end
 
+  def delete
+  end
 
   def villians
     @super_person = SuperPerson.where(is_hero: false)
@@ -54,4 +60,4 @@ class SuperPeopleController < ApplicationController
     params.require(:super_person).permit(:name, :gender, :nemesis_id, :has_cape, :location, :weakness, :is_hero, :description)
   end
 
-# end
+end
