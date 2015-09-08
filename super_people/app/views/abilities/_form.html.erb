@@ -3,10 +3,11 @@
   <%= x.text_field :name %>
 
   <%= x.label :super_with_ability_id %>: 
-  <%= x.text_field :super_id %> <!-- I don't remember what's going on here -->
+  <%= x.collection_select(:name, SuperPerson.all, :id, :name) %>
 
   <%= x.label :description %>
   <%= x.text_field :description %>
+
 
   <%= x.submit %>
 <% end %>

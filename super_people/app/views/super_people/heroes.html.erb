@@ -1,2 +1,7 @@
 <h1>Super Heroes</h1>
 <p><%= link_to 'New Hero', new_super_person_path %></p> 
+
+<% @super_person.each do |super_person| %>
+  <h2><%= super_person.name %></h2>
+  <%= link_to 'Show', super_person_path(super_person) %>
+<% end %>

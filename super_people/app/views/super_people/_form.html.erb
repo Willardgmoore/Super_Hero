@@ -1,39 +1,27 @@
 <%= form_for @super_person do |x| %>
   <%= x.label :name %>: 
-  <%= x.text_field :name %>
+  <%= x.text_field :name %><br>
 
   <%= x.label :gender %>: 
-  <%= x.text_field :gender %> 
-<!--     <select name="mydropdown">
-<option value="true">Female</option>
-<option value="false">Male</option>
-</select>
- -->
+  <%= x.select :gender, options_for_select([['Female', true], ['Male', false]])%><br>
+
   <%= x.label :nemesis_id %>:
-  <%= x.text_field :nemesis_id %>
+  <%= x.collection_select(:name, SuperPerson.all, :id, :name) %><br>
 
   <%= x.label :has_cape %>:
-  <%= x.text_field :has_cape %>
-<!--   <select name="mydropdown">
-<option value="true">Yes</option>
-<option value="false">No</option>
-</select>
- -->
+  <%= x.select :has_cape, options_for_select([['Yes', true], ['No', false]])%><br>
+
   <%= x.label :location %>:
-  <%= x.text_field :location %>
+  <%= x.text_field :location %><br>
 
   <%= x.label :weakness %>:
-  <%= x.text_field :weakness %>
+  <%= x.text_field :weakness %><br>
 
   <%= x.label :is_hero %>:
-  <%= x.text_field :is_hero %>
-<!--     <select name="mydropdown">
-<option value="true">Hero</option>
-<option value="false">Villian</option>
-</select>
- -->
+  <%= x.select :is_hero, options_for_select([['Yes', true], ['No', false]])%><br>
+
   <%= x.label :description %>:
-  <%= x.text_field :description %>
+  <%= x.text_field :description %><br>
 
   <%= x.submit %>
 <% end %>

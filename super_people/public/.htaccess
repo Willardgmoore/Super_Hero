@@ -1,0 +1,5 @@
+PassengerEnabled On
+PassengerLoadShellEnvVars On
+PassengerAppRoot /home/wilmoo9/thefixitgeek.com/super_people
+PassengerRuby /usr/local/ruby20/bin/ruby
+RackEnv development

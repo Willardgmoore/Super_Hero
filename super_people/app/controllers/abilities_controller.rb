@@ -5,6 +5,7 @@ class AbilitiesController < ApplicationController
 
   def show
   	@ability = Ability.find(params[:id])
+    @super_person = SuperPerson.find(params[:id])
   end
 
   def new
